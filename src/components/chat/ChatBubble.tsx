@@ -96,7 +96,10 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
   };
   
   return (
-    <View style={styles.messageRow}>
+    <View style={[
+      styles.messageRow,
+      isUser ? styles.userMessageRow : null
+    ]}>
       {/* 사용자 메시지가 아닌 경우 프로필 이미지 표시 */}
       {!isUser && (
         <View style={styles.avatarContainer}>
@@ -106,7 +109,10 @@ export const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
         </View>
       )}
       
-      <View style={styles.bubbleContainer}>
+      <View style={[
+        styles.bubbleContainer,
+        isUser ? styles.userBubbleContainer : styles.assistantBubbleContainer
+      ]}>
         {/* 메시지 버블 */}
         <View
           style={[
@@ -183,6 +189,9 @@ const styles = StyleSheet.create({
     marginVertical: 4,
     paddingHorizontal: 12,
   },
+  userMessageRow: {
+    justifyContent: 'flex-end',
+  },
   avatarContainer: {
     width: 36,
     marginRight: 8,
@@ -202,8 +211,13 @@ const styles = StyleSheet.create({
     color: Colors.textLight,
   },
   bubbleContainer: {
-    flex: 1,
     maxWidth: '80%',
+  },
+  userBubbleContainer: {
+    alignSelf: 'flex-end',
+  },
+  assistantBubbleContainer: {
+    flex: 1,
   },
   bubble: {
     borderRadius: 16,

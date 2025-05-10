@@ -14,6 +14,7 @@ module.exports = {
     "name": "PragChat",
     "slug": "PragChat",
     "version": "1.0.0",
+    "owner": "onceart",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
