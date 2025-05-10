@@ -107,3 +107,5 @@
 ### 배포
 - EAS 클라우드 빌드 오류
   - ✅ 해결: app.config.js에 owner 필드 추가 (2025-05-11)
+  - ✅ 해결: app.config.js에 ios.infoPlist.ITSAppUsesNonExemptEncryption 추가 (2025-05-11)
+  - ✅ 해결: eas.json에 submit.production.ios.ascAppId 추가 (2025-05-11)

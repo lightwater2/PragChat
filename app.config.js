@@ -26,7 +26,10 @@ module.exports = {
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.pragchat.app"
+      "bundleIdentifier": "com.pragchat.app",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {

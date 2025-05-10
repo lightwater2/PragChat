@@ -48,3 +48,5 @@
 - 메시지 읽음 상태 추적은 신중한 상태 관리가 필요함
 - 햅틱 피드백은 애플리케이션에 더 네이티브한 느낌을 추가함
 - EAS 클라우드 빌드에서 로봇 액세스 토큰 사용 시 app.config.js에 owner 필드 지정이 필요함
+- iOS 앱 빌드에는 app.config.js에 ITSAppUsesNonExemptEncryption 설정이 필요함
+- App Store 제출을 위해서는 eas.json에 ascAppId가 명시되어야 함
