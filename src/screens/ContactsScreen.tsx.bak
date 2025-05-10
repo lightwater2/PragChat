@@ -1,0 +1,6 @@
+rc/screens/ContactsScreen.tsx</path>
+<content lines="217-219">      // 기존 대화가 없으면 새 대화 생성
+      dispatch(createConversation({ 
+        modelId: contact.modelId,
+        contactId: contact.id  // 연락처 ID 추가
+      }));
